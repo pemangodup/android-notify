@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#708090">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:text="All Notes"
+            android:gravity="center"
+            android:textSize="50dp"
+            android:textColor="#FF0000"
+            android:fontFamily="cursive"
+            android:layout_marginBottom="10dp"
+            android:width="1dp"
+            android:layout_height="250dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/note_img"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_id"
+            android:layout_below="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="2dp"/>
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="addNote"
+            android:layout_margin="60dp"
+            android:src="@drawable/circle_add"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
